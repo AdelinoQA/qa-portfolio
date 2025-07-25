@@ -1,0 +1,64 @@
+# Casos de Prueba – Registro de Usuario
+
+| ID | Título                  | Descripción                                                  | Precondiciones      | Pasos                                                      | Datos de prueba                                   | Resultado esperado                       | Prioridad |
+|----|-------------------------|--------------------------------------------------------------|---------------------|------------------------------------------------------------|--------------------------------------------------|----------------------------------------|-----------|
+| 1  | Registro exitoso         | Verificar que un nuevo usuario pueda registrarse correctamente | Formulario disponible | 1. Ir a Registro\n2. Completar campos válidos\n3. Click en 'Registrarse' | Nombre: Juan\nEmail: juan@mail.com\nContraseña: Test1234 | Mensaje de éxito y redirección          | Alta      |
+| 2  | Email ya registrado      | Verificar mensaje de error si se usa un email existente       | Email ya en sistema  | 1. Ir a Registro\n2. Ingresar email ya usado\n3. Click en 'Registrarse' | Email: juan@mail.com                              | Mensaje: 'Email ya registrado'          | Alta      |
+| 3  | Campos obligatorios vacíos | Validar que no se pueda enviar el formulario vacío             | Formulario cargado   | 1. Ir a Registro\n2. Click en 'Registrarse' sin completar campos |                                                  | Mensajes de 'campo requerido'           | Media     |
+
+
+
+# Reporte de Bug
+No se muestra error al registrar email duplicado
+
+**ID:** BUG-002  
+**Fecha:** 25/07/2025  
+**Reportado por:** Adelis Graterol  
+**Severidad:** Media  
+**Prioridad:** Alta  
+
+## Descripción
+Al intentar registrar un nuevo usuario con un email ya registrado, no se muestra el mensaje de error correspondiente.
+
+## Pasos para reproducir
+1. Ir al formulario de registro.  
+2. Ingresar un email que ya existe en la base de datos.  
+3. Completar los demás campos.  
+4. Click en 'Registrarse'.
+
+## Resultado esperado
+Mensaje de error: "Este email ya está registrado".
+
+## Resultado obtenido
+El sistema recarga la página sin mostrar ningún mensaje.
+
+## Entorno
+- Navegador: Chrome 114  
+- SO: Windows 10  
+- URL: https://demoapp.com/registro
+
+
+
+# Plan de Pruebas
+Registro de Usuario
+
+## Objetivo
+Verificar que el sistema permita registrar nuevos usuarios correctamente, validando entradas y condiciones de error.
+
+## Alcance
+Formulario de registro de usuario nuevo. Se validarán los campos requeridos, formato de datos y restricciones.
+
+## Estrategia
+- Diseño de casos de prueba con combinaciones válidas e inválidas.  
+- Pruebas manuales funcionales y de validación.  
+- Registro y reporte de errores encontrados.
+
+## Recursos
+- Tester manual  
+- Navegador Chrome  
+- Planilla de casos de prueba
+
+## Criterios de Aceptación
+- Todos los campos deben ser validados.  
+- Deben mostrarse errores claros para entradas inválidas o repetidas.  
+- El usuario debe registrarse exitosamente si cumple todos los requisitos.
