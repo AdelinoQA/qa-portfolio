@@ -1,0 +1,27 @@
+qa-portfolio/
+│
+├── README.md
+├── test-cases/
+│   ├── login-test-cases.xlsx
+│   ├── shopping-cart-test-cases.xlsx
+│   └── ...
+│
+├── bug-reports/
+│   ├── login-error-report.md
+│   ├── cart-bug-report.md
+│   └── ...
+│
+├── test-plan/
+│   └── ecommerce-test-plan.md
+│
+├── test-execution/
+│   ├── test-execution-report-01.md
+│   └── screenshots/
+│       ├── login-error.png
+│       └── ...
+│
+├── documentation/
+│   ├── traceability-matrix.xlsx
+│   └── summary-report.md
+│
+└── tools-used.md
